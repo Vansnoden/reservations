@@ -2,6 +2,10 @@
 	d acceuil pour que le boutton reserver puisse marcher. Pareil sur la barre de menu. J ai egalement mis l encodage a
 	pour que les pages supportent les accents. 
 	
+	-------------------------------------------------------------------------------------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------------------------------------------------------------------------
+			CECI EST UNE DISCUSSION ENTRE SALVADOR ET MOI POUR MIEUX COMPRENDRE GITHUB
+	
 	<p>partie de salvador</p>
 	bon j'ai ajouter un package pour les servlet un autre pour les beans un dossier pour tout ce qui concernera l'iterface de l'admin(admin 
 	dans WEB-INF) et un autre pour tout ce qui concernera le receptionniste(recep dans WEB-INF) ainsi que le fichier connection.jsp
@@ -10,3 +14,15 @@
 	<ajout>CE QUI A ETE AJOUTER</ajout>
 	<p> partie de Franck </p>
 	Je n ai rien de special a raconter !!!!!
+	Voici le lien pour resoudre un conflit : https://openclassrooms.com/fr/courses/2342361-gerez-votre-code-avec-git-et-github/2433711-resolvez-un-conflit
+	
+	-------------------------------------------------------------------------------------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+--> //AJOUTER EXPLICATION
+
+--> //AJOUTER EXPLICATION
+
+--> //AJOUTER EXPLICATION
+
+--> //AJOUTER EXPLICATION
