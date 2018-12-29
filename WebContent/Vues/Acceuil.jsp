@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page pageEncoding="UTF-8" %>
 <!doctype html>
-<html lang="en">
+<html lang="fr">
     <head>
         <!-- Required meta tags -->
         <meta http-equiv="Content-Type" content="text/html;charset=utf8" />
@@ -39,7 +39,7 @@
                             <li class="nav-item active"><a class="nav-link" href="index.html">ACCEUIL</a></li> 
                             <li class="nav-item"><a class="nav-link" href="about.html">A PROPOS DE NOUS</a></li>
                             <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> FAIRE UNE RESERVATION</a>
+                                <a href=href="<c:url value="/Vues/formReservClient1.jsp"/>" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> FAIRE UNE RESERVATION</a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a class="nav-link" href="blog.html">MODIFIER RESERVATION</a></li>
                                     <li class="nav-item"><a class="nav-link" href="blog-single.html">ANNULER RESERVATION</a></li>
@@ -63,7 +63,7 @@
             <h6>Loin de la vie monotone</h6>
             <h2>Detendez votre esprit</h2>
             <p>Venez profiter de la multitude de services offert par notre luxueux <br> hotel a des prix tres reduits. Reservez des maintenant !!! </p>
-            <a href="#" class="btn theme_btn button_hover"> FAIRE UNE RESERVATION </a>
+            <a href="<c:url value="/Vues/formReservClient1.jsp"/>" class="btn theme_btn button_hover"> FAIRE UNE RESERVATION </a>
           </div>
         </div>
             </div>
@@ -120,13 +120,13 @@
                                         <div class="book_tabel_item">
                                             <div class="form-group">
                                                 <div class='input-group date' id='datetimepicker1'>
-                                                    <input type='text' class="form-control" placeholder="Categorie Chambre(A,B,C,D)"/>
+                                                    <input type='text' class="form-control" placeholder="Adresse email"/>
                                                     <span class="input-group-addon">
                                                         
                                                     </span>
                                                 </div>
                                             </div>
-                                            <a class="book_now_btn button_hover" href="#">RESERVEZ MAINTENANT</a>
+                                            <a class="book_now_btn button_hover" href="<c:url value="/Vues/formReservClient1.jsp"/>">RESERVEZ MAINTENANT</a>
                                         </div>
                                     </div>
                                 </div>

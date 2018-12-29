@@ -1,0 +1,3 @@
+--> Je viens de creer le premier formulaire de reservation du client. J ai egalement mis a jour les liens dans la page
+	d acceuil pour que le boutton reserver puisse marcher. Pareil sur la barre de menu. J ai egalement mis l encodage a
+	pour que les pages supportent les accents. 
