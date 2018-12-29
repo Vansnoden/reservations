@@ -10,9 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Connection
  */
-@WebServlet("/Connection")
+//@WebServlet("/Connection")
 public class Connection extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	public static final String VUE = "/WEB-INF/connection.jsp";
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -27,7 +28,7 @@ public class Connection extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 	}
 
 	/**
@@ -35,7 +36,7 @@ public class Connection extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
 	}
 
 }
