@@ -1,3 +1,8 @@
 --> Je viens de creer le premier formulaire de reservation du client. J ai egalement mis a jour les liens dans la page
 	d acceuil pour que le boutton reserver puisse marcher. Pareil sur la barre de menu. J ai egalement mis l encodage a
 	pour que les pages supportent les accents. 
+	
+	<p>partie de salvador</p>
+	bon j'ai ajouter un package pour les servlet un autre pour les beans un dossier pour tout ce qui concernera l'iterface de l'admin(admin 
+	dans WEB-INF) et un autre pour tout ce qui concernera le receptionniste(recep dans WEB-INF) ainsi que le fichier connection.jsp
+	pour les futur connection aux interface admin et recep en fonction des login et mot de pass. 
