@@ -9,4 +9,4 @@
 	new-->je viens d'ajouter la servlet Connection.java et les page accueil_admin dans le dossier admin et accueil_recep dans recep
 	<ajout>CE QUI A ETE AJOUTER</ajout>
 	<p> partie de Franck </p>
-	Je n ai rien de special a raconter !!!!
+	Je n ai rien de special a raconter !!!!!
