@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+
+.formulaire{
+	margin-left:30%
+}
+
+.champ{
+	width:31em;
+	height:4em;
+	border-radius:10px 10px 10px 10px;
+}
+
+.validation{
+	width:13.5em;
+	height:4em;
+	color: white;
+	background-color:rgb(0,196,46);
+}
+
+.annulation{
+	width:13.5em;
+	height:4em;
+	color: white;
+	background-color:rgb(240,240,0);
+}
