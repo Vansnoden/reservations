@@ -58,14 +58,14 @@
         <section class="banner_area">
             <div class="booking_table d_flex align-items-center">
               <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-        <div class="container">
-          <div class="banner_content text-center">
-            <h6>Loin de la vie monotone</h6>
-            <h2>Detendez votre esprit</h2>
-            <p>Venez profiter de la multitude de services offert par notre luxueux <br> hotel a des prix tres reduits. Reservez des maintenant !!! </p>
-            <a href="<c:url value="/Vues/formReservClient1.jsp"/>" class="btn theme_btn button_hover"> FAIRE UNE RESERVATION </a>
-          </div>
-        </div>
+        		<div class="container">
+          			<div class="banner_content text-center">
+            			<h6>Loin de la vie monotone</h6>
+            			<h2>Detendez votre esprit</h2>
+            			<p>Venez profiter de la multitude de services offert par notre luxueux <br> hotel a des prix tres reduits. Reservez des maintenant !!! </p>
+            			<a href="<c:url value="/Vues/formReservClient1.jsp"/>" class="btn theme_btn button_hover"> FAIRE UNE RESERVATION </a>
+          			</div>
+        		</div>
             </div>
             <div class="hotel_booking_area position">
                     <div class="container">
@@ -74,63 +74,60 @@
                             <h2>Commencez<br>Maintenant</h2>
                         </div>
                         <div class="col-md-9">
-                            <div class="boking_table">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="book_tabel_item">
-                                            <div class="form-group">
-                                                <div class='input-group date' id='datetimepicker11'>
-                                                    <input type='text' class="form-control" placeholder="Entez votre nom"/>
-                                                    <span class="input-group-addon">
-                                                        
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class='input-group date' id='datetimepicker1'>
-                                                    <input type='text' class="form-control" placeholder="Entez votre prenom"/>
-                                                    <span class="input-group-addon">
-                                                        
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="book_tabel_item">
-                                            <div class="form-group">
-                                                <div class='input-group date' id='datetimepicker11'>
-                                                    <input type='text' class="form-control" placeholder="Duree sejour (nombre de jours)"/>
-                                                    <span class="input-group-addon">
-                                                        
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class='input-group date' id='datetimepicker1'>
-                                                    <input type='text' class="form-control" placeholder="Nombres de personnes"/>
-                                                    <span class="input-group-addon">
-                                                        
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="book_tabel_item">
-                                            <div class="form-group">
-                                                <div class='input-group date' id='datetimepicker1'>
-                                                    <input type='text' class="form-control" placeholder="Adresse email"/>
-                                                    <span class="input-group-addon">
-                                                        
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <a class="book_now_btn button_hover" href="<c:url value="/Vues/formReservClient1.jsp"/>">RESERVEZ MAINTENANT</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <form method="post" action="acceuil">
+                            	<div class="boking_table">
+                                	<div class="row">
+                                    	<div class="col-md-4">
+                                        	<div class="book_tabel_item">
+                                            	<div class="form-group">
+                                                	<div class='input-group'>
+                                                    	<input type='text' name="nom" class="form-control" placeholder="<c:choose><c:when test="${!empty form.erreurs['nom']}">${client.nom} (INVALIDE)</c:when> <c:otherwise>Entrez votre nom</c:otherwise></c:choose>"
+														 />
+                                                	</div>
+                                            	</div>
+                                            	<div class="form-group">
+                                                	<div class='input-group'>
+                                                    	<input type='text' name="prenom" class="form-control" placeholder="<c:choose><c:when test="${!empty form.erreurs['prenom']}">${client.prenom} (INVALIDE)</c:when> <c:otherwise>Entrez votre prenom</c:otherwise></c:choose>"
+                                                    	/> 
+                                                	</div>
+                                            	</div>
+                                        	</div>
+                                    	</div>
+                                    	<div class="col-md-4">
+                                        	<div class="book_tabel_item">
+                                            	<div class="form-group">
+                                                	<div class='input-group'>
+                                                    	<input type='text' name="nomjour" class="form-control" placeholder="<c:choose><c:when test="${!empty form.erreurs['nomjour']}">${client.nomjour} (INVALIDE)</c:when> <c:otherwise>Duree sejour (nombre de jours)</c:otherwise></c:choose>" 
+                                                    	/>
+                                                	</div>
+                                            	</div>
+                                            	<div class="form-group">
+                                                	<div class='input-group'>
+                                                    	<input type='text' name="nompers" class="form-control" placeholder="<c:choose><c:when test="${!empty form.erreurs['nompers']}">${client.nompers} (INVALIDE)</c:when> <c:otherwise>Nombres de personnes</c:otherwise></c:choose>"  
+                                                    	/>
+                                                	</div>
+                                            	</div>
+                                        	</div>
+                                    	</div>
+                                    	<div class="col-md-4">
+                                        	<div class="book_tabel_item">
+                                            	<div class="form-group">
+                                                	<div class='input-group date' >
+                                                    	<input type='text' name="email" class="form-control" placeholder="<c:choose><c:when test="${!empty form.erreurs['email']}">    (INVALIDE)</c:when> <c:otherwise>Adresse email</c:otherwise></c:choose>"
+                                                    	/>
+                                                	</div>
+                                            	</div>
+                                            	<!--<a class="book_now_btn button_hover" href="<c:url value="/Vues/formReservClient1.jsp"/>">RESERVEZ MAINTENANT</a>--> 
+                                        		<div class="form-group">
+                                        			<div class='input-group date' >
+                                        				<input type="submit" value="RESERVEZ MAINTENANT" class="book_now_btn button_hover" /> 
+                                        			</div>
+                                        		</div>
+                                        	</div>
+                                    	</div>
+                                	</div>
+                            	</div>
+                        	</form>
                         </div>
                     </div>
                 </div>

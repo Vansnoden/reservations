@@ -9,13 +9,20 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
-		<servlet-name>Connection</servlet-name>
-		<servlet-class>com.reservation.servlets.Connection</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Connection</servlet-name>
-		<url-pattern>/connexion</url-pattern>
-	</servlet-mapping>
+    <servlet-name>Connection</servlet-name>
+    <servlet-class>com.reservation.servlets.Connection</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Connection</servlet-name>
+    <url-pattern>/connexion</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Acceuil</servlet-name>
+    <servlet-class>com.reservation.servlets.Acceuil</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Acceuil</servlet-name>
+    <url-pattern>/acceuil</url-pattern>
+  </servlet-mapping>
 </web-app>
