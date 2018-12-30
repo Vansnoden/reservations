@@ -65,7 +65,7 @@
             			<tr><td><input type="text" placeholder="VOTRE PRENOM ICI" name="prenom" class="champ"></td></tr>
             			<tr><td><input type="text" placeholder="DATE D'ARRIVEE" name="datearriv" required class="champ"></td></tr>
             			<tr><td><input type="text" placeholder="DATE DE DEPART" name="datedepart"required class="champ"></td></tr>
-            			<tr><td><input type="text" placeholder="NOMBRE DE PERSONNE(S)" name="nbpers" class="champ"></td></tr>
+            			<tr><td><input type="number" placeholder="NOMBRE DE PERSONNE(S)" name="nbpers" class="champ"></td></tr>
             			<tr><td><input type="number" placeholder="TELEPHONE" name="telephone" REQUIRED maxlength="20" class="champ"></td></tr>
             			<tr><td><input type="email" placeholder="EMAIL" name="email" class="champ"></td></tr>
             			<tr><td><input type="text" placeholder="NUMERO DE COMPTE" name="compte" class="champ"></td></tr>
