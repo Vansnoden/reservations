@@ -28,6 +28,7 @@
 -----------------------------------------------------------------------------------------------------------------------------
 <p>atagong</p>
 j'ai modifier ton bean client et ton code metier tu trouveras quelques explication en commentaire dans ses fichiers
+>>>desole je suis pas parvenu a mettre d'image en fond pour cconnection.jsp
 -----------------------------------------------------------------------------------------------------------------------------
 
 --> //AJOUTER EXPLICATION
