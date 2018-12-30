@@ -1,9 +1,31 @@
 @charset "ISO-8859-1";
 
 .formulaire{
-	margin-left:25%
+	margin-left:25%;
 }
 
+.bouton_connect{
+	margin-left:10%;
+}
+
+.fond{
+	background-image: url(image/gallery/03-1.jpg);
+	background-color:black
+}
+
+.contenu{
+	margin-top:8em;
+	width:50%;
+	border-radius: 10px 10px 10px 10px;
+	opacity:0.8;
+	background-color:rgb(34,46,68);
+}
+
+.titre{
+	text-align: left;
+	color:white;
+	margin-left:25%;
+}
 .champ{
 	width: 31em;
 	height: 4em;
@@ -37,8 +59,21 @@
 	height:3.8em;
 	color: green;
 	background-color:rgb(255,201,14);
+	margin-left:-2em;
 }
 
+.validation_connect1{
+	margin-left:-2em;
+}
+
+.validation_connect2{
+	margin-left:1em;
+}
+
+.champ_connect{
+	margin-left:20%;
+}
 .marge{
-	marging-top: 20em
+	heigth:20em;
+	width:1em
 }
