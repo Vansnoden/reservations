@@ -22,7 +22,7 @@
 --> //J ai cree le package du code metier et j ai etablie la liaison entre la servlet Connection et la vue connection.jsp
 	Son url est /connexion soit http://localhost:8080/Reservation/connexion
 
---> //AJOUTER EXPLICATION
+--> RECUPERATION DES DONNEES DU MINI FORMULAIRE EFFECTUES
 
 --> //AJOUTER EXPLICATION
 

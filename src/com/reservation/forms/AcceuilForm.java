@@ -33,8 +33,8 @@ public final class AcceuilForm {
         String nomjour = getValeurChamp( request, CHAMP_DUREE );
         String nom = getValeurChamp( request, CHAMP_NOM );
         
-        double valeurnompers = -1;
-        double valeurnomjour = -1;
+        double valeurnompers = 0;
+        double valeurnomjour = 0;
         
         Client client = new Client();
         
