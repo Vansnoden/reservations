@@ -25,5 +25,9 @@
 --> RECUPERATION DES DONNEES DU MINI FORMULAIRE EFFECTUES
 
 --> //AJOUTER EXPLICATION
+-----------------------------------------------------------------------------------------------------------------------------
+<p>atagong</p>
+j'ai modifier ton bean client et ton code metier tu trouveras quelques explication en commentaire dans ses fichiers
+-----------------------------------------------------------------------------------------------------------------------------
 
 --> //AJOUTER EXPLICATION

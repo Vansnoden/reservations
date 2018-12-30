@@ -59,12 +59,12 @@
         <section class="banner_area">
             <div class="booking_table d_flex align-items-center">
               <div class="overlay bg-parallax " data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-            	<form method="post" action="#" class="container col-xs-12 col-md-4 col-lg-5 formulaire">
+            	<form method="post" action="accueil" class="container col-xs-12 col-md-4 col-lg-5 formulaire">
             		<table>
             			<tr><td><input type="text" placeholder="VOTRE NOM ICI" name="nom" required class="champ"></td></tr>
             			<tr><td><input type="text" placeholder="VOTRE PRENOM ICI" name="prenom" class="champ"></td></tr>
-            			<tr><td><input type="text" placeholder="DATE D'ARRIVEE" name="datearriv" required class="champ"></td></tr>
-            			<tr><td><input type="text" placeholder="DATE DE DEPART" name="datedepart"required class="champ"></td></tr>
+            			<tr><td><input type="date" placeholder="DATE D'ARRIVEE" name="datearriv" required class="champ"></td></tr>
+            			<tr><td><input type="date" placeholder="DATE DE DEPART" name="datedepart" required class="champ"></td></tr>
             			<tr><td><input type="number" placeholder="NOMBRE DE PERSONNE(S)" name="nbpers" class="champ"></td></tr>
             			<tr><td><input type="number" placeholder="TELEPHONE" name="telephone" REQUIRED maxlength="20" class="champ"></td></tr>
             			<tr><td><input type="email" placeholder="EMAIL" name="email" class="champ"></td></tr>

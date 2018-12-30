@@ -5,7 +5,9 @@ public class Client {
 	private String nom;
 	private String prenom;
 	private String email;
-	private double nomjour;
+//	au lieu de ceci private double nomjour; avoir plustot:
+	private String dateArriv;
+	private String dateDepart;
 	private double nompers;
 	
 	public String getNom() {
@@ -39,13 +41,21 @@ public class Client {
 	public void setNompers(double nompers) {
 		this.nompers = nompers;
 	}
-	
-	public double getNomjour() {
-		return nomjour;
+
+	public String getDateDepart() {
+		return dateDepart;
 	}
-	
-	public void setNomjour(double nomjour) {
-		this.nomjour = nomjour;
+
+	public void setDateDepart(String dateDepart) {
+		this.dateDepart = dateDepart;
+	}
+
+	public String getDateArriv() {
+		return dateArriv;
+	}
+
+	public void setDateArriv(String dateArriv) {
+		this.dateArriv = dateArriv;
 	}
 	
 	
