@@ -19,7 +19,7 @@ public class Acceuil extends HttpServlet {
       
     public static final String ATT_CLIENT = "client";
     public static final String ATT_FORM = "form";
-    public static final String VUE1      = "/Vues/formReservClient1.jsp";
+    public static final String VUE1      = "/form-reserv-client-1";
     public static final String VUE2      = "/Vues/Acceuil.jsp";
 
     public void doGet( HttpServletRequest request,HttpServletResponse response ) throws ServletException, IOException {
@@ -34,7 +34,6 @@ public class Acceuil extends HttpServlet {
         /* Stockage du formulaire et du bean dans l'objet request */
         request.setAttribute( ATT_FORM, form );
         request.setAttribute( ATT_CLIENT, client );
-        System.out.println("----> LA VALEUR DU RESULTAT EST : " + form.getResultat());
         if(form.getResultat()=="1") {  this.getServletContext().getRequestDispatcher( VUE1 ).forward( request, response ); }
         else { this.getServletContext().getRequestDispatcher( VUE2 ).forward( request, response ); }
         

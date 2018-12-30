@@ -13,6 +13,7 @@ public final class AcceuilForm {
 	private static final String CHAMP_PRENOM = "prenom";
 	private static final String CHAMP_EMAIL = "email";
     private static final String CHAMP_PERS  = "nompers";
+    private static final String CHAMP_DUREE  = "nomjour";
 
     private String resultat;
     private Map<String, String> erreurs     = new HashMap<String, String>();
@@ -30,9 +31,11 @@ public final class AcceuilForm {
     	String email = getValeurChamp( request, CHAMP_EMAIL );
         String prenom = getValeurChamp( request, CHAMP_PRENOM );
         String nompers = getValeurChamp( request, CHAMP_PERS );
+        String nomjour = getValeurChamp( request, CHAMP_DUREE );
         String nom = getValeurChamp( request, CHAMP_NOM );
         
         double valeurnompers = 0;
+        double valeurnomjour = 0;
         
         Client client = new Client();
         
@@ -63,7 +66,13 @@ public final class AcceuilForm {
         	setErreur( CHAMP_PERS, e.getMessage() );
         	}
         client.setNompers(valeurnompers);
-     
+        
+        try {
+        	valeurnomjour = validationNombre( nomjour );
+        	} catch ( Exception e ) {  setErreur( CHAMP_DUREE, e.getMessage() );
+        	}
+        client.setNomjour(valeurnomjour);    
+        
         if ( erreurs.isEmpty() ) {
             resultat = "1";
         } else {
@@ -85,7 +94,6 @@ public final class AcceuilForm {
 
 
     private void validationNom( String nom ) throws Exception {
-    	System.out.println(nom);
     	if (nom != null) {
 	        if ( nom != null && nom.length() < 3 ) {
 	            throw new Exception( "INVALIDE" );

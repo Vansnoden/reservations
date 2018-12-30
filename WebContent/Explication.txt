@@ -30,4 +30,4 @@
 j'ai modifier ton bean client et ton code metier tu trouveras quelques explication en commentaire dans ses fichiers
 -----------------------------------------------------------------------------------------------------------------------------
 
---> //AJOUTER EXPLICATION
+--> MISE A JOUR DU MINI FORMULAIRE

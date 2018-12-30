@@ -25,4 +25,12 @@
     <servlet-name>Acceuil</servlet-name>
     <url-pattern>/acceuil</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>FormReservClient1</servlet-name>
+    <servlet-class>com.reservation.servlets.FormReservClient1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FormReservClient1</servlet-name>
+    <url-pattern>/form-reserv-client-1</url-pattern>
+  </servlet-mapping>
 </web-app>

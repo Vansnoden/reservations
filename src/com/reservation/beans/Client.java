@@ -9,6 +9,7 @@ public class Client {
 	private String dateArriv;
 	private String dateDepart;
 	private double nompers;
+	private double nomjour;
 	
 	public String getNom() {
 		return nom;
@@ -56,6 +57,14 @@ public class Client {
 
 	public void setDateArriv(String dateArriv) {
 		this.dateArriv = dateArriv;
+	}
+
+	public double getNomjour() {
+		return nomjour;
+	}
+
+	public void setNomjour(double nomjour) {
+		this.nomjour = nomjour;
 	}
 	
 	
