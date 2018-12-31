@@ -27,7 +27,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.html"><img src="<c:url value="/image/Logo.png"/>" alt=""></a>
+                    <a class="navbar-brand logo_h" href="<c:url value="/acceuil"/>"><img src="<c:url value="/image/Logo.png"/>" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -36,10 +36,10 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item active"><a class="nav-link" href="index.html">ACCEUIL</a></li> 
+                            <li class="nav-item active"><a class="nav-link" href="<c:url value="/acceuil"/>">ACCEUIL</a></li> 
                             <li class="nav-item"><a class="nav-link" href="about.html">A PROPOS DE NOUS</a></li>
                             <li class="nav-item submenu dropdown">
-                                <a href=href="<c:url value="/Vues/formReservClient1.jsp"/>" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> FAIRE UNE RESERVATION</a>
+                                <a href="<c:url value="/form-reserv-client-1"/>" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> FAIRE UNE RESERVATION</a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a class="nav-link" href="blog.html">MODIFIER RESERVATION</a></li>
                                     <li class="nav-item"><a class="nav-link" href="blog-single.html">ANNULER RESERVATION</a></li>
@@ -63,7 +63,7 @@
             			<h6>Loin de la vie monotone</h6>
             			<h2>Detendez votre esprit</h2>
             			<p>Venez profiter de la multitude de services offert par notre luxueux <br> hotel a des prix tres reduits. Reservez des maintenant !!! </p>
-            			<a href="<c:url value="/Vues/formReservClient1.jsp"/>" class="btn theme_btn button_hover"> FAIRE UNE RESERVATION </a>
+            			<a href="<c:url value="/form-reserv-client-1"/>" class="btn theme_btn button_hover"> FAIRE UNE RESERVATION </a>
           			</div>
         		</div>
             </div>

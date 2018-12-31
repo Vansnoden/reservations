@@ -8,8 +8,10 @@ public class Client {
 //	au lieu de ceci private double nomjour; avoir plustot:
 	private String dateArriv;
 	private String dateDepart;
-	private double nompers;
-	private double nomjour;
+	private int nompers;
+	private int nomjour;
+	private String telephone;
+	private String numeroCompte;
 	
 	public String getNom() {
 		return nom;
@@ -35,11 +37,11 @@ public class Client {
 		this.email = email;
 	}
 	
-	public double getNompers() {
+	public int getNompers() {
 		return nompers;
 	}
 	
-	public void setNompers(double nompers) {
+	public void setNompers(int nompers) {
 		this.nompers = nompers;
 	}
 
@@ -59,12 +61,28 @@ public class Client {
 		this.dateArriv = dateArriv;
 	}
 
-	public double getNomjour() {
+	public int getNomjour() {
 		return nomjour;
 	}
 
-	public void setNomjour(double nomjour) {
+	public void setNomjour(int nomjour) {
 		this.nomjour = nomjour;
+	}
+
+	public String getTelephone() {
+		return telephone;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+
+	public String getNumeroCompte() {
+		return numeroCompte;
+	}
+
+	public void setNumeroCompte(String numeroCompte) {
+		this.numeroCompte = numeroCompte;
 	}
 	
 	

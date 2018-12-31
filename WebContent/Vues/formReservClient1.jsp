@@ -28,7 +28,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.html"><img src="<c:url value="/image/Logo.png"/>" alt=""></a>
+                    <a class="navbar-brand logo_h" href="<c:url value="/acceuil"/>"><img src="<c:url value="/image/Logo.png"/>" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -37,7 +37,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item active"><a class="nav-link" href="index.html">ACCEUIL</a></li> 
+                            <li class="nav-item active"><a class="nav-link" href="<c:url value="/acceuil"/>">ACCEUIL</a></li> 
                             <li class="nav-item"><a class="nav-link" href="about.html">A PROPOS DE NOUS</a></li>
                             <li class="nav-item submenu dropdown">
                                 <a href="<c:url value="/Vues/formReservClient1.jsp"/>" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> FAIRE UNE RESERVATION</a>
@@ -59,16 +59,16 @@
         <section class="banner_area">
             <div class="booking_table d_flex align-items-center">
               <div class="overlay bg-parallax " data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-            	<form method="post" action="accueil" class="container col-xs-12 col-md-4 col-lg-5 formulaire">
+            	<form method="post" action="form-reserv-client-1" class="container col-xs-12 col-md-4 col-lg-5 formulaire">
             		<table>
-            			<tr><td><input type="text" placeholder="VOTRE NOM ICI" name="nom" required class="champ"></td></tr>
-            			<tr><td><input type="text" placeholder="VOTRE PRENOM ICI" name="prenom" class="champ"></td></tr>
-            			<tr><td><input type="date" placeholder="DATE D'ARRIVEE" name="datearriv" required class="champ"></td></tr>
-            			<tr><td><input type="date" placeholder="DATE DE DEPART" name="datedepart" required class="champ"></td></tr>
-            			<tr><td><input type="number" placeholder="NOMBRE DE PERSONNE(S)" name="nbpers" class="champ"></td></tr>
-            			<tr><td><input type="number" placeholder="TELEPHONE" name="telephone" REQUIRED maxlength="20" class="champ"></td></tr>
-            			<tr><td><input type="email" placeholder="EMAIL" name="email" class="champ"></td></tr>
-            			<tr><td><input type="text" placeholder="NUMERO DE COMPTE" name="compte" class="champ"></td></tr>
+            			<tr><td><input type="text" placeholder="VOTRE NOM ICI" name="nom" required class="champ" value="<c:if test="${!empty client.nom}">${client.nom}</c:if>"><span class="erreur">${form.erreurs['nom']}</span><br /></td></tr>
+            			<tr><td><input type="text" placeholder="VOTRE PRENOM ICI" name="prenom" class="champ" value="<c:if test="${!empty client.prenom}">${client.prenom}</c:if>"><span class="erreur">${form.erreurs['prenom']}</span><br /></td></tr>
+            			<tr><td><input type="date" placeholder="DATE D'ARRIVEE" name="datearriv" required class="champ"><span class="erreur">${form.erreurs['datearriv']}</span><br /></td></tr>
+            			<tr><td><input type="text" placeholder="NOMBRE DE JOURS ICI" name="nomjour" class="champ" value="<c:if test="${!empty client.nomjour}">${client.nomjour}</c:if>"><span class="erreur">${form.erreurs['nomjour']}</span><br /></td></tr>
+            			<tr><td><input type="number" placeholder="NOMBRE DE PERSONNE(S)" name="nompers" class="champ" value="<c:if test="${!empty client.nompers}">${client.nompers}</c:if>"><span class="erreur">${form.erreurs['nompers']}</span><br /></td></tr>
+            			<tr><td><input type="number" placeholder="TELEPHONE" name="telephone" REQUIRED maxlength="20" class="champ"><span class="erreur">${form.erreurs['telephone']}</span><br /></td></tr>
+            			<tr><td><input type="email" placeholder="EMAIL" name="email" class="champ" value="<c:if test="${!empty client.email}">${client.email}</c:if>"><span class="erreur">${form.erreurs['email']}</span><br /></td></tr>
+            			<tr><td><input type="text" placeholder="NUMERO DE COMPTE" name="compte" class="champ"><span class="erreur">${form.erreurs['compte']}</span><br /></td></tr>
             			<tr>
             				<td colspan="2">
             					<input type="submit" value="Valider" class="btn btn-success validation">

@@ -77,3 +77,6 @@
 	heigth:20em;
 	width:1em
 }
+form .erreur {
+	color: #900;
+}

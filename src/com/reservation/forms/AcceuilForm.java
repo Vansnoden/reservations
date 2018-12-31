@@ -34,8 +34,8 @@ public final class AcceuilForm {
         String nomjour = getValeurChamp( request, CHAMP_DUREE );
         String nom = getValeurChamp( request, CHAMP_NOM );
         
-        double valeurnompers = 0;
-        double valeurnomjour = 0;
+        int valeurnompers = 0;
+        int valeurnomjour = 0;
         
         Client client = new Client();
         
@@ -103,11 +103,11 @@ public final class AcceuilForm {
         }
     }
     
-    private double validationNombre( String montant ) throws Exception {
-    	double temp;
+    private int validationNombre( String montant ) throws Exception {
+    	int temp;
     	if ( montant != null ) {
     		try {
-    			temp = Double.parseDouble( montant );
+    			temp = Integer.parseInt(montant);
     			if ( temp < 0 ) {
     				throw new Exception( "INVALIDE" );
     			}

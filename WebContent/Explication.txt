@@ -32,3 +32,5 @@ j'ai modifier ton bean client et ton code metier tu trouveras quelques explicati
 -----------------------------------------------------------------------------------------------------------------------------
 
 --> MISE A JOUR DU MINI FORMULAIRE
+
+--> TRANSMISSION ET CONTROLE DES DONNEES EFFECTUES. MAIS IL Y A QUELQUES PROBLEMES COMME LE DOPOST QUI S ACTIVE SEUL.
