@@ -61,14 +61,14 @@
               <div class="overlay bg-parallax " data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
             	<form method="post" action="form-reserv-client-1" class="container col-xs-12 col-md-4 col-lg-5 formulaire">
             		<table>
-            			<tr><td><input type="text" placeholder="VOTRE NOM ICI" name="nom" required class="champ" value="<c:if test="${!empty client.nom}">${client.nom}</c:if>"><span class="erreur">${form.erreurs['nom']}</span><br /></td></tr>
-            			<tr><td><input type="text" placeholder="VOTRE PRENOM ICI" name="prenom" class="champ" value="<c:if test="${!empty client.prenom}">${client.prenom}</c:if>"><span class="erreur">${form.erreurs['prenom']}</span><br /></td></tr>
-            			<tr><td><input type="date" placeholder="DATE D'ARRIVEE" name="datearriv" required class="champ"><span class="erreur">${form.erreurs['datearriv']}</span><br /></td></tr>
-            			<tr><td><input type="text" placeholder="NOMBRE DE JOURS ICI" name="nomjour" class="champ" value="<c:if test="${!empty client.nomjour}">${client.nomjour}</c:if>"><span class="erreur">${form.erreurs['nomjour']}</span><br /></td></tr>
-            			<tr><td><input type="number" placeholder="NOMBRE DE PERSONNE(S)" name="nompers" class="champ" value="<c:if test="${!empty client.nompers}">${client.nompers}</c:if>"><span class="erreur">${form.erreurs['nompers']}</span><br /></td></tr>
-            			<tr><td><input type="number" placeholder="TELEPHONE" name="telephone" REQUIRED maxlength="20" class="champ"><span class="erreur">${form.erreurs['telephone']}</span><br /></td></tr>
-            			<tr><td><input type="email" placeholder="EMAIL" name="email" class="champ" value="<c:if test="${!empty client.email}">${client.email}</c:if>"><span class="erreur">${form.erreurs['email']}</span><br /></td></tr>
-            			<tr><td><input type="text" placeholder="NUMERO DE COMPTE" name="compte" class="champ"><span class="erreur">${form.erreurs['compte']}</span><br /></td></tr>
+            			<tr><td><input type="text" placeholder="VOTRE NOM ICI" name="nom" required class="champ" value="<c:if test="${!empty client.nom}">${client.nom}</c:if>"><span class="erreur">${form.erreurs['nom']}</span></td></tr>
+            			<tr><td><input type="text" placeholder="VOTRE PRENOM ICI" name="prenom" REQUIRED class="champ" value="<c:if test="${!empty client.prenom}">${client.prenom}</c:if>"><span class="erreur">${form.erreurs['prenom']}</span></td></tr>
+            			<tr><td><input type="date" placeholder="DATE D'ARRIVEE" name="datearriv" REQUIRED class="champ"><span class="erreur">${form.erreurs['datearriv']}</span></td></tr>
+            			<tr><td><input type="text" placeholder="NOMBRE DE JOURS ICI" REQUIRED name="nomjour" class="champ" value="<c:if test="${!empty client.nomjour}">${client.nomjour}</c:if>"><span class="erreur">${form.erreurs['nomjour']}</span></td></tr>
+            			<tr><td><input type="number" placeholder="NOMBRE DE PERSONNE(S)" REQUIRED name="nompers" class="champ" value="<c:if test="${!empty client.nompers}">${client.nompers}</c:if>"><span class="erreur">${form.erreurs['nompers']}</span></td></tr>
+            			<tr><td><input type="number" placeholder="TELEPHONE" name="telephone" REQUIRED maxlength="20" class="champ"><span class="erreur">${form.erreurs['telephone']}</span></td></tr>
+            			<tr><td><input type="email" placeholder="EMAIL" name="email" class="champ" REQUIRED value="<c:if test="${!empty client.email}">${client.email}</c:if>"><span class="erreur">${form.erreurs['email']}</span></td></tr>
+            			<tr><td><input type="text" placeholder="NUMERO DE COMPTE" REQUIRED name="compte" class="champ"><span class="erreur">${form.erreurs['compte']}</span></td></tr>
             			<tr>
             				<td colspan="2">
             					<input type="submit" value="Valider" class="btn btn-success validation">

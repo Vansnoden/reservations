@@ -49,7 +49,7 @@ public class FormReservClient1 extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		 /* Pr�paration de l'objet formulaire */
-		System.out.println("Ici");
+		//System.out.println("Ici");
         FormulReservClient1Form form = new FormulReservClient1Form();
         Client client = form.inscrireClient( request );
         // Stockage du formulaire et du bean dans l'objet request 

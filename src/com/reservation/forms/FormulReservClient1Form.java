@@ -93,7 +93,7 @@ public final class FormulReservClient1Form {
         try {
         	validationDate(datearriv);
         } catch (Exception e) {
-        	setErreur( CHAMP_DATE, e.getMessage() );
+        	// CA NE PEUX PAS ARRIVER ICI CAR LA DATE EST OBLIGATOIRE
         }
         client.setDateArriv(datearriv);
         
@@ -110,7 +110,7 @@ public final class FormulReservClient1Form {
         try {
         	validationCompte(compte);
         } catch (Exception e) {
-        	setErreur( CHAMP_NUMCOMP, e.getMessage() );
+        	// CA NE PEUX PAS ARRIVER ICI CAR LE NUM COMPTE EST OBLIGATOIRE
         }
         client.setNumeroCompte(compte);
         
@@ -137,7 +137,7 @@ public final class FormulReservClient1Form {
     private void validationNom( String nom ) throws Exception {
     	if (nom != null) {
 	        if ( nom != null && nom.length() < 3 ) {
-	            throw new Exception( "Le nom d'utilisateur doit contenir au moins 3 caract�res." );
+	            throw new Exception( "Le nom d'utilisateur doit contenir au moins 3 caracteres." );
 	        }
     	} else {
             throw new Exception( "Merci de saisir votre nom." );
