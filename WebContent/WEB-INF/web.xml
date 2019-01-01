@@ -33,4 +33,44 @@
     <servlet-name>FormReservClient1</servlet-name>
     <url-pattern>/form-reserv-client-1</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>recu</servlet-name>
+    <servlet-class>com.reservation.servlets.recu</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>recu</servlet-name>
+    <url-pattern>/recu</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>versement</servlet-name>
+    <servlet-class>com.reservation.servlets.Versement</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>versement</servlet-name>
+    <url-pattern>/versement</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>accueil_admin</servlet-name>
+    <servlet-class>com.reservation.servlets.Accueil_admin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>accueil_admin</servlet-name>
+    <url-pattern>/accueil_admin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>gererBD</servlet-name>
+    <servlet-class>com.reservation.servlets.gestionDB</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>gererBD</servlet-name>
+    <url-pattern>/gererBD</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ajout_Recep</servlet-name>
+    <servlet-class>com.reservation.servlets.Ajout_recep</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ajout_Recep</servlet-name>
+    <url-pattern>/ajout_recep</url-pattern>
+  </servlet-mapping>
 </web-app>
