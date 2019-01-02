@@ -4,7 +4,7 @@
 <html lang="fr">
     <head>
         <!-- Required meta tags -->
-        <meta http-equiv="Content-Type" content="text/html;charset=utf8" />
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="<c:url value="/image/favicon.png"/>" type="image/png">
@@ -69,6 +69,12 @@
             			<tr><td><input type="number" placeholder="TELEPHONE" name="telephone" REQUIRED maxlength="20" class="champ"><span class="erreur">${form.erreurs['telephone']}</span></td></tr>
             			<tr><td><input type="email" placeholder="EMAIL" name="email" class="champ" REQUIRED value="<c:if test="${!empty client.email}">${client.email}</c:if>"><span class="erreur">${form.erreurs['email']}</span></td></tr>
             			<tr><td><input type="text" placeholder="NUMERO DE COMPTE" REQUIRED name="compte" class="champ"><span class="erreur">${form.erreurs['compte']}</span></td></tr>
+            			<tr><td><select CLASS="champ">
+            				<option >DOUBLE CHAMBRE DE LUXE(20000 F)</option>
+            				<option >CHAMBRE DE LUXE(15000 F)</option>
+            				<option >SUITE LUNE DE MIEL(50000 F)</option>
+            				<option selected="selected">ECONOMIE DOUBLE(10000 F)</option>
+            			</select></td></tr>
             			<tr>
             				<td colspan="2">
             					<input type="submit" value="Valider" class="btn btn-success validation">
