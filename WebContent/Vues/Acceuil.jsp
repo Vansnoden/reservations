@@ -81,13 +81,13 @@
                                         	<div class="book_tabel_item">
                                             	<div class="form-group">
                                                 	<div class='input-group'>
-                                                    	<input type='text' name="nom" class="form-control" placeholder="<c:choose><c:when test="${!empty form.erreurs['nom']}">${client.nom} (INVALIDE)</c:when><c:otherwise>Entrez votre nom</c:otherwise></c:choose>" value="<c:if test="${!empty client.nom && empty form.erreurs['nom']}">${client.nom}</c:if>"
+                                                    	<input type='text' name="nom" class="form-control" placeholder="<c:choose><c:when test="${!empty form1.erreurs['nom']}">${sessionScope.client.nom} (INVALIDE)</c:when><c:otherwise>Entrez votre nom</c:otherwise></c:choose>" value="<c:choose><c:when test="${!empty sessionScope.client.nom && empty form1.erreurs['nom']}">${sessionScope.client.nom}</c:when><c:otherwise></c:otherwise></c:choose>"
 														 />
                                                 	</div>
                                             	</div>
                                             	<div class="form-group">
                                                 	<div class='input-group'>
-                                                    	<input type='text' name="prenom" class="form-control" placeholder="<c:choose><c:when test="${!empty form.erreurs['prenom']}">${client.prenom} (INVALIDE)</c:when><c:otherwise>Entrez votre prenom</c:otherwise></c:choose>" value="<c:if test="${!empty client.prenom && empty form.erreurs['prenom']}">${client.prenom}</c:if>"
+                                                    	<input type='text' name="prenom" class="form-control" placeholder="<c:choose><c:when test="${!empty form1.erreurs['prenom']}">${sessionScope.client.prenom} (INVALIDE)</c:when><c:otherwise>Entrez votre prenom</c:otherwise></c:choose>" value="<c:choose><c:when test="${!empty sessionScope.client.prenom && empty form1.erreurs['prenom']}">${sessionScope.client.prenom}</c:when><c:otherwise></c:otherwise></c:choose>"
                                                     	/> 
                                                 	</div>
                                             	</div>
@@ -97,13 +97,13 @@
                                         	<div class="book_tabel_item">
                                             	<div class="form-group">
                                                 	<div class='input-group'>
-                                                    	<input type='text' name="nomjour" class="form-control" placeholder="<c:choose><c:when test="${!empty form.erreurs['nomjour']}">${client.nomjour} (INVALIDE)</c:when><c:otherwise>Duree sejour (nombre de jours)</c:otherwise></c:choose>" value="<c:if test="${!empty client.nomjour && empty form.erreurs['nomjour']}">${client.nomjour}</c:if>" 
+                                                    	<input type='text' name="nomjour" class="form-control" placeholder="<c:choose><c:when test="${!empty form1.erreurs['nomjour']}">${sessionScope.client.nomjour} (INVALIDE)</c:when><c:otherwise>Duree sejour (nombre de jours)</c:otherwise></c:choose>" value="<c:choose><c:when test="${!empty sessionScope.client.nomjour && empty form1.erreurs['nomjour'] && sessionScope.client.nomjour != 0}">${sessionScope.client.nomjour}</c:when><c:otherwise></c:otherwise></c:choose>" 
                                                     	/>
                                                 	</div>
                                             	</div>
                                             	<div class="form-group">
                                                 	<div class='input-group'>
-                                                    	<input type='text' name="nompers" class="form-control" placeholder="<c:choose><c:when test="${!empty form.erreurs['nompers']}">${client.nompers} (INVALIDE)</c:when><c:otherwise>Nombres de personnes</c:otherwise></c:choose>" value="<c:if test="${!empty client.nompers && empty form.erreurs['nompers']}">${client.nompers}</c:if>"  
+                                                    	<input type='text' name="nompers" class="form-control" placeholder="<c:choose><c:when test="${!empty form1.erreurs['nompers']}">${sessionScope.client.nompers} (INVALIDE)</c:when><c:otherwise>Nombres de personnes</c:otherwise></c:choose>" value="<c:choose><c:when test="${!empty sessionScope.client.nompers && empty form1.erreurs['nompers'] && sessionScope.client.nompers != 0}">${sessionScope.client.nompers}</c:when><c:otherwise></c:otherwise></c:choose>"  
                                                     	/>
                                                 	</div>
                                             	</div>
@@ -113,7 +113,7 @@
                                         	<div class="book_tabel_item">
                                             	<div class="form-group">
                                                 	<div class='input-group date' >
-                                                    	<input type='text' name="email" class="form-control" placeholder="<c:choose><c:when test="${!empty form.erreurs['email']}">    (INVALIDE)</c:when><c:otherwise>Adresse email</c:otherwise></c:choose>" value="<c:if test="${!empty client.email && empty form.erreurs['email']}">${client.email}</c:if>"
+                                                    	<input type='text' name="email" class="form-control" placeholder="<c:choose><c:when test="${!empty form1.erreurs['email']}">    (INVALIDE)</c:when><c:otherwise>Adresse email</c:otherwise></c:choose>" value="<c:choose><c:when test="${!empty sessionScope.client.email && empty form1.erreurs['email']}">${sessionScope.client.email}</c:when><c:otherwise></c:otherwise></c:choose>"
                                                     	/>
                                                 	</div>
                                             	</div>

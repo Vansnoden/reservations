@@ -60,20 +60,21 @@
             <div class="booking_table d_flex align-items-center">
               <div class="overlay bg-parallax " data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
             	<form method="post" action="form-reserv-client-1" class="container col-xs-12 col-md-4 col-lg-5 formulaire">
+            		<br>
             		<table>
-            			<tr><td><input type="text" placeholder="VOTRE NOM ICI" name="nom" required class="champ" value="<c:if test="${!empty client.nom}">${client.nom}</c:if>"><span class="erreur">${form.erreurs['nom']}</span></td></tr>
-            			<tr><td><input type="text" placeholder="VOTRE PRENOM ICI" name="prenom" REQUIRED class="champ" value="<c:if test="${!empty client.prenom}">${client.prenom}</c:if>"><span class="erreur">${form.erreurs['prenom']}</span></td></tr>
-            			<tr><td><input type="date" placeholder="DATE D'ARRIVEE" name="datearriv" REQUIRED class="champ"><span class="erreur">${form.erreurs['datearriv']}</span></td></tr>
-            			<tr><td><input type="text" placeholder="NOMBRE DE JOURS ICI" REQUIRED name="nomjour" class="champ" value="<c:if test="${!empty client.nomjour}">${client.nomjour}</c:if>"><span class="erreur">${form.erreurs['nomjour']}</span></td></tr>
-            			<tr><td><input type="number" placeholder="NOMBRE DE PERSONNE(S)" REQUIRED name="nompers" class="champ" value="<c:if test="${!empty client.nompers}">${client.nompers}</c:if>"><span class="erreur">${form.erreurs['nompers']}</span></td></tr>
-            			<tr><td><input type="number" placeholder="TELEPHONE" name="telephone" REQUIRED maxlength="20" class="champ"><span class="erreur">${form.erreurs['telephone']}</span></td></tr>
-            			<tr><td><input type="email" placeholder="EMAIL" name="email" class="champ" REQUIRED value="<c:if test="${!empty client.email}">${client.email}</c:if>"><span class="erreur">${form.erreurs['email']}</span></td></tr>
-            			<tr><td><input type="text" placeholder="NUMERO DE COMPTE" REQUIRED name="compte" class="champ"><span class="erreur">${form.erreurs['compte']}</span></td></tr>
-            			<tr><td><select CLASS="champ">
-            				<option >DOUBLE CHAMBRE DE LUXE(20000 F)</option>
-            				<option >CHAMBRE DE LUXE(15000 F)</option>
-            				<option >SUITE LUNE DE MIEL(50000 F)</option>
-            				<option selected="selected">ECONOMIE DOUBLE(10000 F)</option>
+            			<tr><td><input type="text" placeholder="VOTRE NOM ICI" name="nom" class="champ" value="<c:if test="${!empty sessionScope.client.nom}">${sessionScope.client.nom}</c:if>"><span class="erreur">${form2.erreurs['nom']}</span></td></tr>
+            			<tr><td><input type="text" placeholder="VOTRE PRENOM ICI" name="prenom" class="champ" value="<c:if test="${!empty sessionScope.client.prenom}">${sessionScope.client.prenom}</c:if>"><span class="erreur">${form2.erreurs['prenom']}</span></td></tr>
+            			<tr><td><input type="date" placeholder="DATE D'ARRIVEE" name="datearriv" class="champ"><span class="erreur">${form2.erreurs['datearriv']}</span></td></tr>
+            			<tr><td><input type="text" placeholder="NOMBRE DE JOURS ICI" name="nomjour" class="champ" value="<c:if test="${!empty sessionScope.client.nomjour && sessionScope.client.nomjour != 0 }">${sessionScope.client.nomjour}</c:if>"><span class="erreur">${form2.erreurs['nomjour']}</span></td></tr>
+            			<tr><td><input type="number" placeholder="NOMBRE DE PERSONNE(S)" name="nompers" class="champ" value="<c:if test="${!empty sessionScope.client.nompers && sessionScope.client.nompers != 0 }">${sessionScope.client.nompers}</c:if>"><span class="erreur">${form2.erreurs['nompers']}</span></td></tr>
+            			<tr><td><input type="number" placeholder="TELEPHONE" name="telephone" maxlength="20" class="champ"><span class="erreur">${form2.erreurs['telephone']}</span></td></tr>
+            			<tr><td><input type="email" placeholder="EMAIL" name="email" class="champ" value="<c:if test="${!empty sessionScope.client.email}">${sessionScope.client.email}</c:if>"><span class="erreur">${form2.erreurs['email']}</span></td></tr>
+            			<tr><td><input type="text" placeholder="NUMERO DE COMPTE" name="compte" class="champ"><span class="erreur">${form2.erreurs['compte']}</span></td></tr>
+            			<tr><td><select CLASS="champ" name="categorie">
+            				<option selected="selected">A : ECONOMIE DOUBLE(10000 F)</option>
+            				<option >B : DOUBLE CHAMBRE DE LUXE(20000 F)</option>
+            				<option >C : CHAMBRE DE LUXE(15000 F)</option>
+            				<option >D : SUITE LUNE DE MIEL(50000 F)</option>
             			</select></td></tr>
             			<tr>
             				<td colspan="2">

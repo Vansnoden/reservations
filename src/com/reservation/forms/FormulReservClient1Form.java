@@ -2,14 +2,12 @@ package com.reservation.forms;
 
 import com.reservation.beans.*;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
-//on ne gere pas le nombre de jour le input de type date pour la date d'arrivee et la date de depart sont requis
 public final class FormulReservClient1Form {
 
 	private static final String CHAMP_NOM = "nom";
@@ -20,6 +18,7 @@ public final class FormulReservClient1Form {
     private static final String CHAMP_DATE  = "datearriv";
     private static final String CHAMP_TEL  = "telephone";
     private static final String CHAMP_NUMCOMP  = "compte";
+    private static final String CHAMP_CATEG  = "categorie";
 
     private String resultat;
     private Map<String, String> erreurs     = new HashMap<String, String>();
@@ -32,7 +31,7 @@ public final class FormulReservClient1Form {
         return resultat;
     }
 
-    public Client inscrireClient( HttpServletRequest request ) {
+    public void inscrireClient( HttpServletRequest request, Client client ) {
         
     	String email = getValeurChamp( request, CHAMP_EMAIL );
         String prenom = getValeurChamp( request, CHAMP_PRENOM );
@@ -43,11 +42,12 @@ public final class FormulReservClient1Form {
         String datearriv = getValeurChamp( request, CHAMP_DATE );	
         String compte = getValeurChamp( request, CHAMP_NUMCOMP );
         String datedepart = null;
+        String categorieChaine = getValeurChamp(request,CHAMP_CATEG);
         
         int valeurnompers = 0;
         int valeurnomjour = 0;
-        
-        Client client = new Client();
+        char categorie = categorieChaine.charAt(0);
+
         
         try {
             validationEmail( email );
@@ -75,13 +75,13 @@ public final class FormulReservClient1Form {
         	} catch ( Exception e ) {
         	setErreur( CHAMP_PERS, e.getMessage() );
         	}
-        client.setNompers(valeurnompers);
+        if(valeurnompers!=0) { client.setNompers(valeurnompers); }
         
         try {
         	valeurnomjour = validationNombre( nomjour );
         	} catch ( Exception e ) {  setErreur( CHAMP_DUREE, e.getMessage() );
         	}
-        client.setNomjour(valeurnomjour);   
+        if(valeurnomjour!=0) {client.setNomjour(valeurnomjour);}   
         
         try {
         	validationTel(telephone);
@@ -110,17 +110,16 @@ public final class FormulReservClient1Form {
         try {
         	validationCompte(compte);
         } catch (Exception e) {
-        	// CA NE PEUX PAS ARRIVER ICI CAR LE NUM COMPTE EST OBLIGATOIRE
+        	setErreur( CHAMP_NUMCOMP, e.getMessage() );
         }
         client.setNumeroCompte(compte);
+        client.setCategorie(categorie);
         
         if ( erreurs.isEmpty() ) {
             resultat = "1";
         } else {
             resultat = "0";
         }
-        
-        return client;
     }
 
     private void validationEmail( String email ) throws Exception {
@@ -180,7 +179,10 @@ public final class FormulReservClient1Form {
     }
     
     public void validationCompte (String compte) throws Exception {
-    	if(compte == null) throw new Exception( "Merci d'entrer un numero de compte." );
+    	if(compte != null) {
+    		if(compte.length() < 4) { throw new Exception("Le numero de compte doit contenir plus de 4 caracteres.");}
+    	}
+    	else throw new Exception( "Merci d' entrer un numero de compte valide." );
     }
     
     public Calendar conversionStringtoDate (String string) {
@@ -208,7 +210,7 @@ public final class FormulReservClient1Form {
     private static String getValeurChamp( HttpServletRequest request, String nomChamp ) {
         String valeur = request.getParameter( nomChamp );
         if ( valeur == null || valeur.trim().length() == 0 ) {
-            return null;
+            return "";
         } else {
             return valeur.trim();
         }

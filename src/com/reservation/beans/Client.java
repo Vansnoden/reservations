@@ -12,6 +12,8 @@ public class Client {
 	private int nomjour;
 	private String telephone;
 	private String numeroCompte;
+	private char categorie;
+	private double montant;
 	
 	public String getNom() {
 		return nom;
@@ -83,6 +85,22 @@ public class Client {
 
 	public void setNumeroCompte(String numeroCompte) {
 		this.numeroCompte = numeroCompte;
+	}
+
+	public char getCategorie() {
+		return categorie;
+	}
+
+	public void setCategorie(char categorie) {
+		this.categorie = categorie;
+	}
+
+	public double getMontant() {
+		return montant;
+	}
+
+	public void setMontant(double montant) {
+		this.montant = montant;
 	}
 	
 	

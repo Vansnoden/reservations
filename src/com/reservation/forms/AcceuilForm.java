@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
-//on ne gere pas le nombre de jour le input de type date pour la date d'arrivee et la date de depart sont requis
 public final class AcceuilForm {
 
 	private static final String CHAMP_NOM = "nom";
@@ -26,7 +25,7 @@ public final class AcceuilForm {
         return resultat;
     }
 
-    public Client inscrireClient( HttpServletRequest request ) {
+    public void inscrireClient( HttpServletRequest request, Client client ) {
         
     	String email = getValeurChamp( request, CHAMP_EMAIL );
         String prenom = getValeurChamp( request, CHAMP_PRENOM );
@@ -36,8 +35,6 @@ public final class AcceuilForm {
         
         int valeurnompers = 0;
         int valeurnomjour = 0;
-        
-        Client client = new Client();
         
         try {
             validationEmail( email );
@@ -79,7 +76,6 @@ public final class AcceuilForm {
             resultat = "0";
         }
         
-        return client;
     }
 
     private void validationEmail( String email ) throws Exception {

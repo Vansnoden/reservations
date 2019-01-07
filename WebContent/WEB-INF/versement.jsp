@@ -59,10 +59,10 @@
         <section class="banner_area">
             <div class="booking_table d_flex align-items-center">
               <div class="overlay bg-parallax " data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-            	<form method="post" action="recu" class="container col-xs-12 col-md-4 col-lg-5 formulaire">
+            	<form method="post" action="versement" class="container col-xs-12 col-md-4 col-lg-5 formulaire">
             		<table>
-            			<tr><td><input type="text" placeholder="CODE DE PAIEMENT" REQUIRED name="nompers" class="champ" maxlength="8"></td></tr>
-            			<tr><td><input type="number" placeholder="MONTANT VERSEE (+ dE 40%)" name="telephone" REQUIRED class="champ"></td></tr>
+            			<tr><td><input type="text" placeholder="CODE DE VALIDATION DU PAIEMENT" name="code" class="champ" maxlength="8" ><span class="erreur">${form3.erreurs['code']}</span></td></tr>
+            			<tr><td><input type="number" placeholder="MONTANT VERSEE (+ de 40%)" name="montant" class="champ"><span class="erreur">${form3.erreurs['montant']}</span></td></tr>
             				<td colspan="2">
             					<input type="submit" value="Valider" class="btn btn-success validation">
             					<input type="reset" value="Annuler" class = "btn btn-warning annulation">
